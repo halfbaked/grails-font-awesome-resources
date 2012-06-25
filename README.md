@@ -16,7 +16,7 @@ Example
 ```
     // ApplicationResources.groovy
     customBootstrap {
-      dependsOn 'bootstrap', 'fontawesome'
+      dependsOn 'bootstrap', 'font-awesome'
     }
 ```
 
