@@ -22,10 +22,11 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build(":tomcat:$grailsVersion",
-              ":release:1.0.0") {
-            export = false
-        }
-       compile ":lesscss-resources:1.3.0.3"
+      build(":tomcat:$grailsVersion",
+            ":release:2.0.3") {
+          export = false
+      }
+      runtime ":resources:1.1.6"
+      compile ":lesscss-resources:1.3.0.3"
     }
 }
