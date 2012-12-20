@@ -31,7 +31,8 @@ Example
 
 The above example I'm not using the [grails twitter bootstrap plugin](http://grails.org/plugin/twitter-bootstrap). 
 When using font-awesome, I found it was best to build the bootstrap files from the original Bootstrap website and opt 
-not to include the glyphicons sprite.
+not to include the glyphicons sprite. I did however borrow some of the good work done on the plugin to integrate bootstrap 
+with Grails paginate functionality.
 
 ## Usage
 You can include an icon in your HTML using the appropriate css class. See the [Font Awesome project on GitHub](http://fortawesome.githuCSSb.com/Font-Awesome/) for a list of the icons and their 
