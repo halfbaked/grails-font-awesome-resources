@@ -1,7 +1,7 @@
 modules = {
 
   'font-awesome' {
-    resource url:[plugin: 'font-awesome-resources', dir: 'css', file: 'font-awesome.css']
+    resource id: 'font-awesome', url:[plugin: 'font-awesome-resources', dir: 'css', file: 'font-awesome.css']
   }
 
 }
