@@ -25,7 +25,7 @@ grails.project.dependency.resolution = {
       build(":tomcat:$grailsVersion", ":release:2.2.0", ":rest-client-builder:1.0.3") {
           export = false
       }
-      runtime ":resources:1.1.6" {
+      runtime(":resources:1.1.6") {
         export = false
       }
     }
