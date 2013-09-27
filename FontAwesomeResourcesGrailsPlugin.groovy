@@ -12,7 +12,7 @@ class FontAwesomeResourcesGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Grails Font Awesome Resources Plugin" // Headline display name of the plugin
-    def author = "Eamonn O'Connell"
+    def author = "Eamonn O'Connell, Alexey Zhokhov"
     def authorEmail = "eamonnoconnell@gmail.com"
     def description = '''\
 Like the jquery-resources plugin that pulls in the jquery javascript lib as a resource, this plugin pulls in Font Awesome. 
@@ -40,34 +40,4 @@ Font Awesome probably works best when used with the twitter bootstrap UI framewo
     // Online location of the plugin's browseable source code.
     def scm = [ url: "https://github.com/halfbaked/grails-font-awesome-resources" ]
 
-    def doWithWebDescriptor = { xml ->
-        // TODO Implement additions to web.xml (optional), this event occurs before
-    }
-
-    def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
-    }
-
-    def doWithDynamicMethods = { ctx ->
-        // TODO Implement registering dynamic methods to classes (optional)
-    }
-
-    def doWithApplicationContext = { applicationContext ->
-        // TODO Implement post initialization spring config (optional)
-    }
-
-    def onChange = { event ->
-        // TODO Implement code that is executed when any artefact that this plugin is
-        // watching is modified and reloaded. The event contains: event.source,
-        // event.application, event.manager, event.ctx, and event.plugin.
-    }
-
-    def onConfigChange = { event ->
-        // TODO Implement code that is executed when the project configuration changes.
-        // The event is the same as for 'onChange'.
-    }
-
-    def onShutdown = { event ->
-        // TODO Implement code that is executed when the application shuts down (optional)
-    }
 }
