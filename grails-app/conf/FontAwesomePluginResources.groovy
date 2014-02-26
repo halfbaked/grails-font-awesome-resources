@@ -1,9 +1,8 @@
 def log = org.slf4j.LoggerFactory.getLogger('grails.plugins.twitterbootstrap.FontAwesomePluginResources')
 def dev = grails.util.GrailsUtil.isDevelopmentEnv()
-
-def applicationContext = org.codehaus.groovy.grails.commons.ApplicationHolder.application.mainContext
+def applicationContext = grails.util.Holders.applicationContext
 def lesscssPlugin = applicationContext.pluginManager.getGrailsPlugin('lesscss-resources') || applicationContext.pluginManager.getGrailsPlugin('less-resources')
-def configDefaultBundle = org.codehaus.groovy.grails.commons.ApplicationHolder.application.config.grails.plugins.fontawesomeresources.defaultBundle
+def configDefaultBundle = grails.util.Holders.config.grails.plugins.fontawesomeresources.defaultBundle
 if (!configDefaultBundle && !configDefaultBundle.equals(false)) {
     configDefaultBundle = 'bundle_fontawesome'
 }
@@ -28,13 +27,13 @@ modules = {
     'font-awesome-css' {
         defaultBundle configDefaultBundle
         
-        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
+        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css/font-awesom', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
     }
 
     'font-awesome-less' {
         defaultBundle configDefaultBundle
         
-        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
+        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less/font-awesome', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
     }
     
     'font-awesome' {
