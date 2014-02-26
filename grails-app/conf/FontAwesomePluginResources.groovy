@@ -28,13 +28,13 @@ modules = {
     'font-awesome-css' {
         defaultBundle configDefaultBundle
         
-        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
+        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css/font-awesom', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
     }
 
     'font-awesome-less' {
         defaultBundle configDefaultBundle
         
-        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
+        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less/font-awesome', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
     }
     
     'font-awesome' {
