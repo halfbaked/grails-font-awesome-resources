@@ -1,9 +1,8 @@
 def log = org.slf4j.LoggerFactory.getLogger('grails.plugins.twitterbootstrap.FontAwesomePluginResources')
 def dev = grails.util.GrailsUtil.isDevelopmentEnv()
-
-def applicationContext = org.codehaus.groovy.grails.commons.ApplicationHolder.application.mainContext
+def applicationContext = grails.util.Holders.applicationContext
 def lesscssPlugin = applicationContext.pluginManager.getGrailsPlugin('lesscss-resources') || applicationContext.pluginManager.getGrailsPlugin('less-resources')
-def configDefaultBundle = org.codehaus.groovy.grails.commons.ApplicationHolder.application.config.grails.plugins.fontawesomeresources.defaultBundle
+def configDefaultBundle = grails.util.Holders.config.grails.plugins.fontawesomeresources.defaultBundle
 if (!configDefaultBundle && !configDefaultBundle.equals(false)) {
     configDefaultBundle = 'bundle_fontawesome'
 }
