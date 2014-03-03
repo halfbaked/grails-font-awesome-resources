@@ -27,7 +27,7 @@ modules = {
     'font-awesome-css' {
         defaultBundle configDefaultBundle
         
-        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css/font-awesom', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
+        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css/font-awesome', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
     }
 
     'font-awesome-less' {
