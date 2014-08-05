@@ -38,5 +38,4 @@ From version 4.0.3.0 support for IE7 is gone, since Font Awesome does not suppor
 
     // Online location of the plugin's browseable source code.
     def scm = [ url: "https://github.com/halfbaked/grails-font-awesome-resources" ]
-
 }
