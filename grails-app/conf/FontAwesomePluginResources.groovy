@@ -1,14 +1,11 @@
 def log = org.slf4j.LoggerFactory.getLogger('grails.plugins.twitterbootstrap.FontAwesomePluginResources')
 def dev = grails.util.GrailsUtil.isDevelopmentEnv()
-
-def applicationContext = grails.util.Holders.applicationContext
-def lesscssPlugin = applicationContext.pluginManager.getGrailsPlugin('lesscss-resources') || applicationContext.pluginManager.getGrailsPlugin('less-resources')
+def pluginManager = grails.util.Holders.pluginManager
+def lesscssPlugin = pluginManager.getGrailsPlugin('lesscss-resources') || pluginManager.getGrailsPlugin('less-resources')
 def configDefaultBundle = grails.util.Holders.config.grails.plugins.fontawesomeresources.defaultBundle
 if (!configDefaultBundle && !configDefaultBundle.equals(false)) {
     configDefaultBundle = 'bundle_fontawesome'
 }
-
-def configIncludeIe7 = grails.util.Holders.config.grails.plugins.fontawesomeresources.includeIe7
 
 def dirLessSource
 def dirTarget 
@@ -30,20 +27,13 @@ modules = {
     'font-awesome-css' {
         defaultBundle configDefaultBundle
         
-        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
-    }
-    
-    'font-awesome-ie7-css' {
-        defaultBundle configDefaultBundle
-        dependsOn 'font-awesome-css'
-        
-        resource id: 'font-awesome-ie7-css', url: [plugin: 'font-awesome-resources', dir: 'css', file: (dev ? 'font-awesome-ie7.css' : 'font-awesome-ie7.min.css')], disposition: 'head', exclude: 'minify'
+        resource id: 'font-awesome-css', url: [plugin: 'font-awesome-resources', dir: 'css/font-awesome', file: (dev ? cssFile : cssminFile)], disposition: 'head', exclude: 'minify'
     }
 
     'font-awesome-less' {
         defaultBundle configDefaultBundle
         
-        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
+        resource id:'font-awesome-less', url:[plugin: 'font-awesome-resources', dir: 'less/font-awesome', file: 'font-awesome.less'], attrs:[rel: "stylesheet/less", type:'css', order:120], disposition: 'head'
     }
     
     'font-awesome' {
@@ -53,10 +43,6 @@ modules = {
             dependsOn 'font-awesome-less'
         } else {
             dependsOn 'font-awesome-css'
-        
-            if (configIncludeIe7) {
-                dependsOn 'font-awesome-ie7-css'
-            }
         }
     }
     

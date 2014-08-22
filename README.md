@@ -34,6 +34,9 @@ When using font-awesome, I found it was best to build the bootstrap files from t
 not to include the glyphicons sprite. I did however borrow some of the good work done on the plugin to integrate bootstrap
 with Grails paginate functionality.
 
+### Using with Resources plugin
+With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8"" in BuildConfig.groovy in order to avoid an exception.
+
 ### Asset Pipeline
 Optionally you can also use asset-pipeline and include font-awesome in your existing css file:
 ```css
