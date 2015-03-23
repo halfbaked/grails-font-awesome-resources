@@ -19,7 +19,7 @@
  * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  * @author <a href='mailto:soeren@glasius.dk'>Søren Berg Glasius</a>
  */
-class FontAwesomeResourcesGrailsPlugin {
+class FontAwesomeGrailsPlugin {
 
     def version = '4.3.0.1'
     def grailsVersion = '2.0 > *'
@@ -34,7 +34,7 @@ Font Awesome probably works best when used with the twitter bootstrap UI framewo
 From version 4.0.3.0 support for IE7 is gone, since Font Awesome does not support IE7 any longer.
 '''
 
-    def documentation = 'https://github.com/halfbaked/grails-font-awesome-resources'
+    def documentation = 'https://github.com/donbeave/grails-font-awesome'
 
     def license = 'APACHE'
 
