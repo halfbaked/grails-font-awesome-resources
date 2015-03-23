@@ -18,8 +18,8 @@
  * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
 eventAssetPrecompileStart = { assetConfig ->
-    if (!config.grails.assets.plugin.'font-awesome-resources'.excludes ||
-            config.grails.assets.plugin.'font-awesome-resources'.excludes.size() == 0) {
-        config.grails.assets.plugin.'font-awesome-resources'.excludes = ['font-awesome/*.less']
+    if (!config.grails.assets.plugin.'font-awesome'.excludes ||
+            config.grails.assets.plugin.'font-awesome'.excludes.size() == 0) {
+        config.grails.assets.plugin.'font-awesome'.excludes = ['font-awesome/*.less']
     }
 }
