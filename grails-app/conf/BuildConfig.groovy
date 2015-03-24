@@ -1,30 +1,21 @@
-grails.project.class.dir = 'target/classes'
-grails.project.test.class.dir = 'target/test-classes'
-grails.project.test.reports.dir = 'target/test-reports'
+grails.project.work.dir = 'target'
 
 grails.project.dependency.resolver = 'maven'
 grails.project.dependency.resolution = {
-    inherits('global') {
-
-    }
+    inherits 'global'
     log 'warn'
+
     repositories {
         mavenLocal()
-        grailsPlugins()
-        grailsHome()
         grailsCentral()
         mavenCentral()
     }
-    dependencies {
-    }
 
     plugins {
-        build(':release:3.0.1', ':rest-client-builder:2.0.1') {
+        build(':release:3.0.1', ':rest-client-builder:2.0.3') {
             export = false
         }
 
-        runtime(':resources:1.2.8') {
-            export = false
-        }
+        runtime ':resources:1.2.8'
     }
 }
