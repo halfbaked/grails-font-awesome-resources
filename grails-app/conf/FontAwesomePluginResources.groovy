@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import grails.util.GrailsUtil
+import grails.util.Environment
 import grails.util.Holders
 import org.slf4j.LoggerFactory
 
@@ -23,26 +23,17 @@ import org.slf4j.LoggerFactory
  * @author <a href='mailto:soeren@glasius.dk'>Søren Berg Glasius</a>
  */
 def log = LoggerFactory.getLogger('grails.plugins.twitterbootstrap.FontAwesomePluginResources')
-def dev = GrailsUtil.isDevelopmentEnv()
 def pluginManager = Holders.pluginManager
-def lesscssPlugin = pluginManager.getGrailsPlugin('lesscss-resources') || pluginManager.getGrailsPlugin('less-resources')
+boolean lesscssPlugin = pluginManager.getGrailsPlugin('lesscss-resources') || pluginManager.getGrailsPlugin('less-resources')
 def configDefaultBundle = Holders.config.grails.plugins.fontawesomeresources.defaultBundle
 if (!configDefaultBundle && !configDefaultBundle.equals(false)) {
     configDefaultBundle = 'bundle_fontawesome'
 }
 
-def dirLessSource
-def dirTarget
+log.debug "config: grails.plugins.fontawesomeresources.defaultBundle = $configDefaultBundle"
+log.debug "is lesscss-resources plugin loaded? $lesscssPlugin"
 
-log.debug "dirLessSource: ${dirLessSource}"
-log.debug "dirTarget: ${dirTarget}"
-
-def cssFile = 'font-awesome.css'
-def cssminFile = "font-awesome.min.css"
-
-log.debug "config: grails.plugins.fontawesomeresources.defaultBundle = ${configDefaultBundle}"
-
-log.debug "is lesscss-resources plugin loaded? ${!!lesscssPlugin}"
+String cssFile = Environment.developmentMode ? 'font-awesome.css' : 'font-awesome.min.css'
 
 modules = {
 
@@ -52,7 +43,7 @@ modules = {
         resource id: 'font-awesome-css',
                 url: [plugin: 'font-awesome-resources',
                       dir   : 'css/font-awesome',
-                      file  : (dev ? cssFile : cssminFile)],
+                      file  : cssFile],
                 disposition: 'head',
                 exclude: 'minify'
     }
@@ -73,11 +64,6 @@ modules = {
     'font-awesome' {
         defaultBundle configDefaultBundle
 
-        if (lesscssPlugin) {
-            dependsOn 'font-awesome-less'
-        } else {
-            dependsOn 'font-awesome-css'
-        }
+        dependsOn lesscssPlugin ? 'font-awesome-less' : 'font-awesome-css'
     }
-
 }
