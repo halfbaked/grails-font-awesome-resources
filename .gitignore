@@ -3,6 +3,8 @@
 *.iws
 *.log
 eclipse
+.idea
+*.iml
 /grails-font-awesome-*.zip
 /grails-font-awesome-*.zip.sha1
 /plugin.xml
