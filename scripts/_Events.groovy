@@ -18,7 +18,7 @@
  * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
 eventAssetPrecompileStart = {
-    def config = config.grails.assets.plugin.'font-awesome'
+    def config = config.grails.assets.plugin.'font-awesome-resources'
     if (!config.excludes) {
         config.excludes = ['font-awesome/*.less']
     }
