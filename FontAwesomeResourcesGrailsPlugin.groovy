@@ -31,6 +31,6 @@ From version 4.0.3.0 support for IE7 is gone, since Font Awesome does not suppor
         [name: 'Alexey Zhokhov', email: 'donbeave@gmail.com'],
         [name: 'Søren Berg Glasius', email: 'soeren@glasius.dk']
     ]
-    def issueManagement = [url: 'https://github.com/halfbaked/grails-font-awesome-resources/issues']
-    def scm = [url: 'https://github.com/halfbaked/grails-font-awesome-resources']
+    def issueManagement = [url: 'https://github.com/donbeave/grails-font-awesome/issues']
+    def scm = [url: 'https://github.com/donbeave/grails-font-awesome']
 }
