@@ -5,8 +5,8 @@
 eclipse
 .idea
 *.iml
-/grails-font-awesome-resources-*.zip
-/grails-font-awesome-resources-*.zip.sha1
+/grails-font-awesome-*.zip
+/grails-font-awesome-*.zip.sha1
 /plugin.xml
 /target
 /web-app/WEB-INF
