@@ -52,7 +52,7 @@ With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" r
 * Reference the font-awesome resource from within your ApplicationResources file or directly in a gsp page/layout
 Example
 
-```
+```groovy
 // ApplicationResources.groovy
 customBootstrap {
     dependsOn 'font-awesome'
