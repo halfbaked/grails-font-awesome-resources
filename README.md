@@ -95,7 +95,9 @@ You can include an icon in your HTML using the appropriate css class. See the [F
 
 Example
 
+```html
     <i class="fa fa-user"></i>
+```
 
 Copyright and License
 ===
