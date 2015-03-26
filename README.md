@@ -1,7 +1,7 @@
 grails-font-awesome-resources
 =============================
 
-Provides the Twitter Bootstrap compatible awesome font based icon set Font Awesome as a [Asset-Pipeline](https://grails.org/plugin/asset-pipeline) or [Grails resource](http://grails.org/plugin/resources).
+Provides the Twitter Bootstrap compatible awesome font based icon set Font Awesome as a [Asset-Pipeline](http://grails.org/plugin/asset-pipeline) or [Grails resource](http://grails.org/plugin/resources).
 
 ## Summary
 [Font Awesome](http://fortawesome.github.com/Font-Awesome/) is an iconic font designed for use with Twitter Bootstrap. Twitter Bootstrap comes with an icon set (GLYPHICONS) built in. This set is rendered using image sprites. Font based icons are an alternative, and convenient means of incorporating icons into a web application. It is a technique that is growing in popularity. One of its plus points is how easy it is to manipulate an icon with css. A few lines of the most basic css can change the size and color of an icon, or set of icons. Try doing that with an image sprite!
