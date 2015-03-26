@@ -1,53 +1,73 @@
-grails-font-awesome-resources
-=============================
+grails-lesshat [![Build Status](https://travis-ci.org/donbeave/grails-lesshat.svg?branch=master)](https://travis-ci.org/donbeave/grails-lesshat)
+============
 
-Provides the Twitter Bootstrap compatible awesome font based icon set Font Awesome as a [Grails resource](http://grails.org/plugin/resources).
+Grails LESS Hat plugin
 
-## Background
-[Font Awesome](http://fortawesome.github.com/Font-Awesome/) is an iconic font designed for use with Twitter Bootstrap. Twitter Bootstrap comes with an icon set (Gliphicons) built in. This set is rendered using image sprites. Font based icons are are an alternative, and convenient means of incorporating icons into a web application. It is a technique that is growing in popularity. One of its plus points is how easy it is to manipulate an icon with css. A few lines of the most basic css can change the size and color of an icon, or set of icons. Try doing that with an image sprite!
+Summary
+-------
 
-## Installation
-To add the fontawesome resource to your project
+Provides [LESS Hat][lesshat] support for the asset-pipeline static asset management plugin.
 
-* Install the plugin by adding the appropriate plugin dependency in your Build.config
-* Reference the font-awesome resource from within your ApplicationResources file or directly in a gsp page/layout
-Example
+Installation
+------------
 
-    // ApplicationResources.groovy
-    customBootstrap {
-      dependsOn 'font-awesome'
-      resource url: 'css/bootstrap.css'
-      resource url: 'js/bootstrap.js'
-      resource url: 'css/bootstrap-fixtaglib.css'
-    }
+In `BuildConfig.groovy`, add the dependency to "plugins" section:
 
-    // main.gsp
-    <r:require module="customBootstrap" />
-
-The above example I'm not using the [grails twitter bootstrap plugin](http://grails.org/plugin/twitter-bootstrap).
-When using font-awesome, I found it was best to build the bootstrap files from the original Bootstrap website and opt
-not to include the glyphicons sprite. I did however borrow some of the good work done on the plugin to integrate bootstrap
-with Grails paginate functionality.
-
-### Using with Resources plugin
-With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8" in BuildConfig.groovy in order to avoid an exception.
-
-### Asset Pipeline
-Optionally you can also use asset-pipeline and include font-awesome in your existing css file:
-```css
-/*
- *= require font-awesome
- * or
- *= require font-awesome-css
- */
+```groovy
+plugins {
+    //...
+    compile ':lesshat:3.0.2.1'
+    //...
+}
 ```
 
-The latter option will observe the ie7 configuration and include that css file automatically if enabled.
+Change the version to reflect the actual version you would like to use.
 
-## Usage
-You can include an icon in your HTML using the appropriate css class. See the [Font Awesome project on GitHub](http://fortawesome.githuCSSb.com/Font-Awesome/) for a list of the icons and their
-corresponding class names.
+Usage
+-----
 
-Example
+In you LESS stylesheet file just add following code at the top:
 
-    <i class="icon-user"></i>
+```
+@import 'lesshat.less';
+```
+
+Then you can use all 86 smart mixins. Documentation of the mixins please check on the official GitHub page:
+https://github.com/madebysource/lesshat#-documentation
+
+
+Copyright and License
+===
+
+lesshat plugin:
+
+Copyright 2014 Alexey Zhokhov under the [Apache License, Version 2.0](LICENSE). Supported by [Polusharie][polusharie].
+
+LESS Hat files:
+
+```
+The MIT License
+   
+Copyright (c) 2013 Petr Brzek
+   
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+[lesshat]: http://lesshat.madebysource.com/
+[polusharie]: http://www.polusharie.com
