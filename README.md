@@ -41,7 +41,7 @@ Stylesheet `grails-app/assets/javascripts/application.css`:
 
 In you LESS stylesheet file just add following code at the top:
 
-```
+```less
 @import 'font-awesome';
 ```
 
