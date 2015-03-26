@@ -91,12 +91,11 @@ Declare bootstrap resource module in GSP page header:
 ```
 
 ## Icons usage
-You can include an icon in your HTML using the appropriate css class. See the [Font Awesome project on GitHub](http://fortawesome.githuCSSb.com/Font-Awesome/) for a list of the icons and their
-corresponding class names.
+You can include an icon in your HTML using the appropriate css class. See the [Font Awesome](http://fontawesome.io/icons/) for a list of the icons and their corresponding class names.
 
 Example
 
-    <i class="icon-user"></i>
+    <i class="fa fa-user"></i>
 
 Copyright and License
 ===
