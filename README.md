@@ -37,7 +37,7 @@ Stylesheet `grails-app/assets/javascripts/application.css`:
 */
 ```
 
-### LESS Support
+#### LESS Support
 
 In you LESS stylesheet file just add following code at the top:
 
@@ -68,7 +68,7 @@ When using font-awesome, I found it was best to build the bootstrap files from t
 not to include the glyphicons sprite. I did however borrow some of the good work done on the plugin to integrate bootstrap
 with Grails paginate functionality.
 
-### Usage in Grails Resources support
+#### Usage in Grails Resources support
 
 A font-awesome resource depends on `font-awesome-css` or `font-awesome-less` (if less plugin installed).
 
@@ -77,7 +77,7 @@ Declare bootstrap resource module in GSP page header:
 <r:require modules="font-awesome"/>
 ```
 
-### Usage in GSP page with Resource support
+#### Usage in GSP page with Resource support
 ```gsp
 <html>
     <head>
