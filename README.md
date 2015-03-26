@@ -21,45 +21,76 @@ plugins {
 
 Change the version to reflect the actual version you would like to use.
 
+## Usage
 
+## Including the resources with Asset-Pipeline plugin
 
-Resources plugin
+The recommended way is to use the [asset-pipeline plugin](http://grails.org/plugin/asset-pipeline) (minimal 0.1.7). It is
+the default since Grails 2.4.0 and replaces the resources plugin.
+
+To include font-awesome resources add the following to your application's css.
+
+Stylesheet `grails-app/assets/javascripts/application.css`:
+```css
+/*
+*= require font-awesome
+*/
+```
+
+### LESS Support
+
+In you LESS stylesheet file just add following code at the top:
+
+```
+@import 'font-awesome';
+```
+
+## Resources plugin
+
+With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8" in BuildConfig.groovy in order to avoid an exception.
 
 * Reference the font-awesome resource from within your ApplicationResources file or directly in a gsp page/layout
 Example
 
-    // ApplicationResources.groovy
-    customBootstrap {
-      dependsOn 'font-awesome'
-      resource url: 'css/bootstrap.css'
-      resource url: 'js/bootstrap.js'
-      resource url: 'css/bootstrap-fixtaglib.css'
-    }
+```
+// ApplicationResources.groovy
+customBootstrap {
+    dependsOn 'font-awesome'
 
-    // main.gsp
-    <r:require module="customBootstrap" />
+    resource url: 'css/bootstrap.css'
+    resource url: 'js/bootstrap.js'
+    resource url: 'css/bootstrap-fixtaglib.css'
+}
+```
 
 The above example I'm not using the [grails twitter bootstrap plugin](http://grails.org/plugin/twitter-bootstrap).
 When using font-awesome, I found it was best to build the bootstrap files from the original Bootstrap website and opt
 not to include the glyphicons sprite. I did however borrow some of the good work done on the plugin to integrate bootstrap
 with Grails paginate functionality.
 
-### Using with Resources plugin
-With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8" in BuildConfig.groovy in order to avoid an exception.
+### Usage in Grails Resources support
 
-### Asset Pipeline
-Optionally you can also use asset-pipeline and include font-awesome in your existing css file:
-```css
-/*
- *= require font-awesome
- * or
- *= require font-awesome-css
- */
+A font-awesome resource depends on `font-awesome-css` or `font-awesome-less` (if less plugin installed).
+
+Declare bootstrap resource module in GSP page header:
+```gsp
+<r:require modules="font-awesome"/>
 ```
 
-The latter option will observe the ie7 configuration and include that css file automatically if enabled.
+### Usage in GSP page with Resource support
+```gsp
+<html>
+    <head>
+        <meta name="layout" content="main"/>
+        <r:require modules="font-awesome"/>
+    </head>
+<body>
+    <h1> Hello World </h1>
+</body>
+</html>
+```
 
-## Usage
+## Icons usage
 You can include an icon in your HTML using the appropriate css class. See the [Font Awesome project on GitHub](http://fortawesome.githuCSSb.com/Font-Awesome/) for a list of the icons and their
 corresponding class names.
 
