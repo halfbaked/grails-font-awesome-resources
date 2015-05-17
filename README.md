@@ -1,4 +1,4 @@
-grails-font-awesome-resources
+grails-font-awesome-resources [![Build Status](https://travis-ci.org/donbeave/grails-font-awesome.svg)](https://travis-ci.org/donbeave/grails-font-awesome)
 =============================
 
 Provides the Twitter Bootstrap compatible awesome font based icon set Font Awesome as a [Asset-Pipeline](http://grails.org/plugin/asset-pipeline) or [Grails resource](http://grails.org/plugin/resources).
