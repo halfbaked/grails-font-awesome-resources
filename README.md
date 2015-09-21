@@ -104,12 +104,12 @@ Copyright and License
 
 font-awesome-resources plugin:
 
-Copyright 2014 Alexey Zhokhov under the [Apache License, Version 2.0](LICENSE). Supported by [Polusharie][polusharie].
+Copyright 2014 Alexey Zhokhov under the [Apache License, Version 2.0](LICENSE). Supported by [AZ][zhokhov].
+
+[zhokhov]: http://www.zhokhov.com
 
 Font Awesome files:
 
 ```
 http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 ```
-
-[polusharie]: http://www.polusharie.com
