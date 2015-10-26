@@ -15,7 +15,7 @@
  */
 
 class FontAwesomeResourcesGrailsPlugin {
-    def version = '4.3.0.2'
+    def version = '4.4.0'
     def grailsVersion = '2.0 > *'
     def title = 'Grails Font Awesome Resources Plugin'
     def description = '''\
