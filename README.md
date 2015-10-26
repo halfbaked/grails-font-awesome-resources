@@ -14,7 +14,7 @@ In `BuildConfig.groovy`, add the dependency to "plugins" section:
 ```groovy
 plugins {
     //...
-    runtime ':font-awesome-resources:4.3.0.1'
+    runtime ':font-awesome-resources:4.4.0'
     //...
 }
 ```
