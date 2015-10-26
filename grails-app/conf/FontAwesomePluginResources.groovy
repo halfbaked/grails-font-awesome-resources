@@ -42,7 +42,7 @@ modules = {
 
         resource id: 'font-awesome-css',
                 url: [plugin: 'font-awesome-resources',
-                      dir   : 'css/font-awesome',
+                      dir   : 'css',
                       file  : cssFile],
                 disposition: 'head',
                 exclude: 'minify'
