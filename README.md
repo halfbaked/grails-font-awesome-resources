@@ -1,5 +1,9 @@
-grails-font-awesome-resources [![Build Status](https://travis-ci.org/donbeave/grails-font-awesome.svg)](https://travis-ci.org/donbeave/grails-font-awesome)
+Grails Font-Awesome plugin [![Build Status](https://travis-ci.org/donbeave/grails-font-awesome.svg)](https://travis-ci.org/donbeave/grails-font-awesome)
 =============================
+
+## Branches
+
+The current master branch is for versions of the plugin compatible with Grails 3. There is a "[grails2](https://github.com/donbeave/grails-font-awesome/tree/grails2)" branch for on-going maintenance of previous versions of the plugin compatible with Grails 2. Please submit any pull requests to the appropriate branch.
 
 Provides the Twitter Bootstrap compatible awesome font based icon set Font Awesome as a [Asset-Pipeline](http://grails.org/plugin/asset-pipeline) or [Grails resource](http://grails.org/plugin/resources).
 
