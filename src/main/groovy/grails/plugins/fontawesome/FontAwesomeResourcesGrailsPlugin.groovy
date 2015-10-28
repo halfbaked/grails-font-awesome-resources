@@ -1,3 +1,4 @@
+package grails.plugins.fontawesome
 /*
  * Copyright 2012 the original author or authors
  *
@@ -15,8 +16,8 @@
  */
 
 class FontAwesomeResourcesGrailsPlugin {
-    def version = '4.4.0'
-    def grailsVersion = '2.0 > *'
+    def version = '5.0.0.0'
+    def grailsVersion = '3.0 > *'
     def title = 'Grails Font Awesome Resources Plugin'
     def description = '''\
 Like the jquery-resources plugin that pulls in the jquery javascript lib as a resource, this plugin pulls in Font Awesome.
