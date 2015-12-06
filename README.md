@@ -1,5 +1,7 @@
-Grails Font-Awesome plugin [![Build Status](https://travis-ci.org/donbeave/grails-font-awesome.svg)](https://travis-ci.org/donbeave/grails-font-awesome)
-=============================
+# Grails Font-Awesome plugin
+
+[![Build Status](https://travis-ci.org/donbeave/grails-font-awesome.svg)](https://travis-ci.org/donbeave/grails-font-awesome)
+[![Analytics](https://ga-beacon.appspot.com/UA-71075299-1/grails-font-awesome/main-page)](https://github.com/igrigorik/ga-beacon)
 
 ## Branches
 
