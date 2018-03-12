@@ -53,7 +53,7 @@ In you LESS stylesheet file just add following code at the top:
 
 ## Resources plugin
 
-With Grails version 2.3.8 and later, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8" in BuildConfig.groovy in order to avoid an exception.
+With Grails version 2.3.8 and earlier, you should set compile ":resources:1.2.8" rather than runtime ":resources:1.2.8" in BuildConfig.groovy in order to avoid an exception.
 
 * Reference the font-awesome resource from within your ApplicationResources file or directly in a gsp page/layout
 Example
